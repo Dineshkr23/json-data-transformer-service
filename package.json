@@ -1,0 +1,30 @@
+{
+  "name": "json-data-transformer-service",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dineshkr23/json-data-transformer-service.git"
+  },
+  "author": "Dinesh Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dineshkr23/json-data-transformer-service/issues"
+  },
+  "homepage": "https://github.com/Dineshkr23/json-data-transformer-service#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
