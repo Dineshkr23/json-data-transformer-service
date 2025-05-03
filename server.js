@@ -13,303 +13,342 @@ app.get("/", (req, res) => {
 });
 
 const textPayload = async (type, sub_type, data) => {
-  const id = uuidv4();
-  const flowConfig = {
-    edges: [],
-    nodes: [{ id, type, sub_type, data }],
-    frontEndNodes: [
-      {
-        id,
-        type,
-        position: { x: 317, y: 225 },
-        dragHandle: ".drag-handle__custom",
-        data,
-        measured: { width: 236, height: 174 },
-        selected: false,
-        dragging: false,
-      },
-    ],
-    frontEndEdges: [],
-  };
-
-  return flowConfig;
+  try {
+    const id = uuidv4();
+    const flowConfig = {
+      edges: [],
+      nodes: [{ id, type, sub_type, data }],
+      frontEndNodes: [
+        {
+          id,
+          type,
+          position: { x: 317, y: 225 },
+          dragHandle: ".drag-handle__custom",
+          data,
+          measured: { width: 236, height: 174 },
+          selected: false,
+          dragging: false,
+        },
+      ],
+      frontEndEdges: [],
+    };
+    return flowConfig;
+  } catch (error) {
+    console.log("Text payload Error", error);
+    return null;
+  }
 };
 
 const mediaPayload = async (type, sub_type, data) => {
-  const id = uuidv4();
-  const flowConfig = {
-    edges: [],
-    nodes: [{ id, type, sub_type, data }],
-    frontEndNodes: [
-      {
-        id,
-        type: sub_type,
-        position: {
-          x: 186.50900417796106,
-          y: 175.30974499946797,
+  try {
+    const id = uuidv4();
+    const flowConfig = {
+      edges: [],
+      nodes: [{ id, type, sub_type, data }],
+      frontEndNodes: [
+        {
+          id,
+          type: sub_type,
+          position: {
+            x: 186.50900417796106,
+            y: 175.30974499946797,
+          },
+          dragHandle: ".drag-handle__custom",
+          data,
+          measured: { width: 302, height: 386 },
+          selected: false,
+          dragging: false,
         },
-        dragHandle: ".drag-handle__custom",
-        data,
-        measured: { width: 302, height: 386 },
-        selected: false,
-        dragging: false,
-      },
-    ],
-    frontEndEdges: [],
-  };
-
-  return flowConfig;
+      ],
+      frontEndEdges: [],
+    };
+    return flowConfig;
+  } catch (error) {
+    console.log("Media payload Error", error);
+    return null;
+  }
 };
 
 const listPayload = async (type, sub_type, data) => {
-  const id = uuidv4();
-  const flowConfig = {
-    edges: [],
-    nodes: [{ id, type, sub_type, data }],
-    frontEndNodes: [
-      {
-        id,
-        type: sub_type,
-        position: {
-          x: 72.78362033719246,
-          y: 289.0572359834628,
+  try {
+    const id = uuidv4();
+    const flowConfig = {
+      edges: [],
+      nodes: [{ id, type, sub_type, data }],
+      frontEndNodes: [
+        {
+          id,
+          type: sub_type,
+          position: {
+            x: 72.78362033719246,
+            y: 289.0572359834628,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {
+            listOptions: data.action.sections[0].rows.map((btn, index) => {
+              return { id: `text${index}`, title: btn.title };
+            }),
+            header: data.header.text,
+            body: data.body.text,
+            btnText: data.action.button,
+          },
+          measured: {
+            width: 234,
+            height: 181,
+          },
+          selected: false,
+          dragging: false,
         },
-        dragHandle: ".drag-handle__custom",
-        data: {
-          listOptions: data.action.sections[0].rows.map((btn, index) => {
-            return { id: `text${index}`, title: btn.title };
-          }),
-          header: data.header.text,
-          body: data.body.text,
-          btnText: data.action.button,
-        },
-        measured: {
-          width: 234,
-          height: 181,
-        },
-        selected: false,
-        dragging: false,
-      },
-    ],
-    frontEndEdges: [],
-  };
-
-  return flowConfig;
+      ],
+      frontEndEdges: [],
+    };
+    return flowConfig;
+  } catch (error) {
+    console.log("List payload Error", error);
+    return null;
+  }
 };
 
 const buttonPayload = async (type, sub_type, data) => {
-  const id = uuidv4();
-  const flowConfig = {
-    edges: [],
-    nodes: [{ id, type, sub_type, data }],
-    frontEndNodes: [
-      {
-        id,
-        type: sub_type,
-        position: {
-          x: 72.78362033719246,
-          y: 289.0572359834628,
+  try {
+    const id = uuidv4();
+    const flowConfig = {
+      edges: [],
+      nodes: [{ id, type, sub_type, data }],
+      frontEndNodes: [
+        {
+          id,
+          type: sub_type,
+          position: {
+            x: 72.78362033719246,
+            y: 289.0572359834628,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {
+            headerType: data.header.type,
+            btnOptions: data.action.buttons.map((btn, index) => {
+              return { id: `text${index}`, title: btn.reply.title };
+            }),
+            ...(data.header.type === "text" && { header: data.header.text }),
+            ...((data.header.type === "image" ||
+              data.header.type === "video" ||
+              data.header.type === "document") && {
+              media: data.header[data.header.type],
+            }),
+            body: data.body.text,
+          },
+          measured: {
+            width: 234,
+            height: 181,
+          },
+          selected: false,
+          dragging: false,
         },
-        dragHandle: ".drag-handle__custom",
-        data: {
-          headerType: data.header.type,
-          btnOptions: data.action.buttons.map((btn, index) => {
-            return { id: `text${index}`, title: btn.reply.title };
-          }),
-          ...(data.header.type === "text" && { header: data.header.text }),
-          ...((data.header.type === "image" ||
-            data.header.type === "video" ||
-            data.header.type === "document") && {
-            media: data.header[data.header.type],
-          }),
-          body: data.body.text,
-        },
-        measured: {
-          width: 234,
-          height: 181,
-        },
-        selected: false,
-        dragging: false,
-      },
-    ],
-    frontEndEdges: [],
-  };
-
-  return flowConfig;
+      ],
+      frontEndEdges: [],
+    };
+    return flowConfig;
+  } catch (error) {
+    console.log("Button payload Error", error);
+    return null;
+  }
 };
 
 const flowPayload = async (type, sub_type, data) => {
-  const id = uuidv4();
-  const flowConfig = {
-    edges: [],
-    nodes: [{ id, type, sub_type, data }],
-    frontEndNodes: [
-      {
-        id,
-        type: sub_type,
-        position: {
-          x: 72.78362033719246,
-          y: 289.0572359834628,
+  try {
+    const id = uuidv4();
+    const flowConfig = {
+      edges: [],
+      nodes: [{ id, type, sub_type, data }],
+      frontEndNodes: [
+        {
+          id,
+          type: sub_type,
+          position: {
+            x: 72.78362033719246,
+            y: 289.0572359834628,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {
+            headerType: data.header.type,
+            ...(data.header.type === "text" && { header: data.header.text }),
+            ...((data.header.type === "image" ||
+              data.header.type === "video" ||
+              data.header.type === "document") && {
+              media: data.header[data.header.type],
+            }),
+            body: data.body.text,
+            btnText: data.btnText,
+            flowId: data.action.flow,
+          },
+          measured: {
+            width: 234,
+            height: 136,
+          },
+          selected: false,
+          dragging: false,
         },
-        dragHandle: ".drag-handle__custom",
-        data: {
-          headerType: data.header.type,
-          ...(data.header.type === "text" && { header: data.header.text }),
-          ...((data.header.type === "image" ||
-            data.header.type === "video" ||
-            data.header.type === "document") && {
-            media: data.header[data.header.type],
-          }),
-          body: data.body.text,
-          btnText: data.btnText,
-          flowId: data.action.flow,
-        },
-        measured: {
-          width: 234,
-          height: 136,
-        },
-        selected: false,
-        dragging: false,
-      },
-    ],
-    frontEndEdges: [],
-  };
-
-  return flowConfig;
+      ],
+      frontEndEdges: [],
+    };
+    return flowConfig;
+  } catch (error) {
+    console.log("Flow payload Error", error);
+    return null;
+  }
 };
 
 const catalogMessagePayload = async (type, sub_type, data) => {
-  const id = uuidv4();
-  const flowConfig = {
-    edges: [],
-    nodes: [{ id, type, sub_type, data }],
-    frontEndNodes: [
-      {
-        id,
-        type,
-        position: {
-          x: 141.48675632883806,
-          y: 158.93943978158975,
+  try {
+    const id = uuidv4();
+    const flowConfig = {
+      edges: [],
+      nodes: [{ id, type, sub_type, data }],
+      frontEndNodes: [
+        {
+          id,
+          type,
+          position: {
+            x: 141.48675632883806,
+            y: 158.93943978158975,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {
+            catalogue_type: sub_type,
+            catalog_body: data.body.text,
+          },
+          measured: {
+            width: 261,
+            height: 353,
+          },
+          selected: false,
+          dragging: false,
         },
-        dragHandle: ".drag-handle__custom",
-        data: {
-          catalogue_type: sub_type,
-          catalog_body: data.body.text,
-        },
-        measured: {
-          width: 261,
-          height: 353,
-        },
-        selected: false,
-        dragging: false,
-      },
-    ],
-    frontEndEdges: [],
-  };
-
-  return flowConfig;
+      ],
+      frontEndEdges: [],
+    };
+    return flowConfig;
+  } catch (error) {
+    console.log("Catalog Message payload Error", error);
+    return null;
+  }
 };
 
 const productMessagePayload = async (type, sub_type, data) => {
-  const id = uuidv4();
-  const flowConfig = {
-    edges: [],
-    nodes: [{ id, type, sub_type, data }],
-    frontEndNodes: [
-      {
-        id,
-        type,
-        position: {
-          x: 141.48675632883806,
-          y: 158.93943978158975,
+  try {
+    const id = uuidv4();
+    const flowConfig = {
+      edges: [],
+      nodes: [{ id, type, sub_type, data }],
+      frontEndNodes: [
+        {
+          id,
+          type,
+          position: {
+            x: 141.48675632883806,
+            y: 158.93943978158975,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {
+            catalogue_type: sub_type,
+            catalog_body: data.body.text,
+            product_id: data.action.product_retailer_id,
+          },
+          measured: {
+            width: 261,
+            height: 353,
+          },
+          selected: false,
+          dragging: false,
         },
-        dragHandle: ".drag-handle__custom",
-        data: {
-          catalogue_type: sub_type,
-          catalog_body: data.body.text,
-          product_id: data.action.product_retailer_id,
-        },
-        measured: {
-          width: 261,
-          height: 353,
-        },
-        selected: false,
-        dragging: false,
-      },
-    ],
-    frontEndEdges: [],
-  };
-
-  return flowConfig;
+      ],
+      frontEndEdges: [],
+    };
+    return flowConfig;
+  } catch (error) {
+    console.log("Catalog Product payload Error", error);
+    return null;
+  }
 };
 
 const productListMessagePayload = async (type, sub_type, data) => {
-  const id = uuidv4();
-  const flowConfig = {
-    edges: [],
-    nodes: [{ id, type, sub_type, data }],
-    frontEndNodes: [
-      {
-        id,
-        type,
-        position: {
-          x: 141.48675632883806,
-          y: 158.93943978158975,
+  try {
+    const id = uuidv4();
+    const flowConfig = {
+      edges: [],
+      nodes: [{ id, type, sub_type, data }],
+      frontEndNodes: [
+        {
+          id,
+          type,
+          position: {
+            x: 141.48675632883806,
+            y: 158.93943978158975,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {
+            catalogue_type: sub_type,
+            catalog_body: data.body.text,
+            product_set_ids: data.action.product_set_ids,
+            ...(data.header?.text && { catalog_header: data.header.text }),
+            catalog_btn_text: data.action.btn_text,
+          },
+          measured: {
+            width: 261,
+            height: 353,
+          },
+          selected: false,
+          dragging: false,
         },
-        dragHandle: ".drag-handle__custom",
-        data: {
-          catalogue_type: sub_type,
-          catalog_body: data.body.text,
-          product_set_ids: data.action.product_set_ids,
-          ...(data.header.text && { catalog_header: data.header.text }),
-          catalog_btn_text: data.action.btn_text,
-        },
-        measured: {
-          width: 261,
-          height: 353,
-        },
-        selected: false,
-        dragging: false,
-      },
-    ],
-    frontEndEdges: [],
-  };
-
-  return flowConfig;
+      ],
+      frontEndEdges: [],
+    };
+    return flowConfig;
+  } catch (error) {
+    console.log("Catalog Product List payload Error", error);
+    return null;
+  }
 };
 
 const templatePayload = async (type, sub_type, data) => {
-  const id = uuidv4();
-  const flowConfig = {
-    edges: [],
-    nodes: [{ id, type, sub_type, data }],
-    frontEndNodes: [
-      {
-        id,
-        type,
-        position: {
-          x: 141.9283845391425,
-          y: -28.515084634337043,
+  try {
+    const id = uuidv4();
+    const flowConfig = {
+      edges: [],
+      nodes: [{ id, type, sub_type, data }],
+      frontEndNodes: [
+        {
+          id,
+          type,
+          position: {
+            x: 141.9283845391425,
+            y: -28.515084634337043,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {
+            template: data.templateId,
+            ...((data.media?.image ||
+              data.media?.video ||
+              data.media?.document) && {
+              media:
+                data.media.image || data.media.video || data.media.document,
+            }),
+          },
+          measured: {
+            width: 261,
+            height: 526,
+          },
+          selected: true,
+          dragging: false,
         },
-        dragHandle: ".drag-handle__custom",
-        data: {
-          template: data.templateId,
-          ...((data.media.image || data.media.video || data.media.document) && {
-            media: data.media.image || data.media.video || data.media.document,
-          }),
-        },
-        measured: {
-          width: 261,
-          height: 526,
-        },
-        selected: true,
-        dragging: false,
-      },
-    ],
-    frontEndEdges: [],
-  };
-
-  return flowConfig;
+      ],
+      frontEndEdges: [],
+    };
+    return flowConfig;
+  } catch (error) {
+    console.log("Template payload Error", error);
+    return null;
+  }
 };
 
 const payloadHandlers = {
@@ -339,7 +378,7 @@ const groupPayload = async (type, data) => {
       const handler = payloadHandlers[key];
 
       if (!handler) {
-        console.warn(
+        console.log(
           `No handler found for type: ${itemType}, sub_type: ${sub_type}`
         );
         return null;
@@ -349,7 +388,7 @@ const groupPayload = async (type, data) => {
         const result = await handler(itemType, sub_type, itemData);
         return result?.frontEndNodes?.[0] || null;
       } catch (error) {
-        console.error(`Error processing ${itemType}/${sub_type}:`, error);
+        console.log(`Error processing ${itemType}/${sub_type}:`, error);
         return null;
       }
     })
