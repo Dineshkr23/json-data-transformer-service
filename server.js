@@ -24,7 +24,10 @@ const textPayload = async (type, sub_type, data) => {
           type,
           position: { x: 317, y: 225 },
           dragHandle: ".drag-handle__custom",
-          data,
+          data: {
+            preview_url: true,
+            body: data.body.text,
+          },
           measured: { width: 236, height: 174 },
           selected: false,
           dragging: false,
