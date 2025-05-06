@@ -15,10 +15,27 @@ app.get("/", (req, res) => {
 const textPayload = async (type, sub_type, data) => {
   try {
     const id = uuidv4();
+    const startId = uuidv4();
     const flowConfig = {
       edges: [],
       nodes: [{ id, type, sub_type, data }],
       frontEndNodes: [
+        {
+          id: startId,
+          type: "startNode",
+          position: {
+            x: -206.68458729880103,
+            y: 186.04391192742173,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {},
+          measured: {
+            width: 112,
+            height: 36,
+          },
+          selected: false,
+          dragging: false,
+        },
         {
           id,
           type,
@@ -33,7 +50,15 @@ const textPayload = async (type, sub_type, data) => {
           dragging: false,
         },
       ],
-      frontEndEdges: [],
+      frontEndEdges: [
+        {
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: id,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${id}`,
+        },
+      ],
     };
     return flowConfig;
   } catch (error) {
@@ -45,10 +70,27 @@ const textPayload = async (type, sub_type, data) => {
 const mediaPayload = async (type, sub_type, data) => {
   try {
     const id = uuidv4();
+    const startId = uuidv4();
     const flowConfig = {
       edges: [],
       nodes: [{ id, type, sub_type, data }],
       frontEndNodes: [
+        {
+          id: startId,
+          type: "startNode",
+          position: {
+            x: -206.68458729880103,
+            y: 186.04391192742173,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {},
+          measured: {
+            width: 112,
+            height: 36,
+          },
+          selected: false,
+          dragging: false,
+        },
         {
           id,
           type: sub_type,
@@ -63,7 +105,15 @@ const mediaPayload = async (type, sub_type, data) => {
           dragging: false,
         },
       ],
-      frontEndEdges: [],
+      frontEndEdges: [
+        {
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: id,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${id}`,
+        },
+      ],
     };
     return flowConfig;
   } catch (error) {
@@ -75,10 +125,27 @@ const mediaPayload = async (type, sub_type, data) => {
 const listPayload = async (type, sub_type, data) => {
   try {
     const id = uuidv4();
+    const startId = uuidv4();
     const flowConfig = {
       edges: [],
       nodes: [{ id, type, sub_type, data }],
       frontEndNodes: [
+        {
+          id: startId,
+          type: "startNode",
+          position: {
+            x: -206.68458729880103,
+            y: 186.04391192742173,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {},
+          measured: {
+            width: 112,
+            height: 36,
+          },
+          selected: false,
+          dragging: false,
+        },
         {
           id,
           type: sub_type,
@@ -103,7 +170,15 @@ const listPayload = async (type, sub_type, data) => {
           dragging: false,
         },
       ],
-      frontEndEdges: [],
+      frontEndEdges: [
+        {
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: id,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${id}`,
+        },
+      ],
     };
     return flowConfig;
   } catch (error) {
@@ -115,10 +190,27 @@ const listPayload = async (type, sub_type, data) => {
 const buttonPayload = async (type, sub_type, data) => {
   try {
     const id = uuidv4();
+    const startId = uuidv4();
     const flowConfig = {
       edges: [],
       nodes: [{ id, type, sub_type, data }],
       frontEndNodes: [
+        {
+          id: startId,
+          type: "startNode",
+          position: {
+            x: -206.68458729880103,
+            y: 186.04391192742173,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {},
+          measured: {
+            width: 112,
+            height: 36,
+          },
+          selected: false,
+          dragging: false,
+        },
         {
           id,
           type: sub_type,
@@ -148,7 +240,15 @@ const buttonPayload = async (type, sub_type, data) => {
           dragging: false,
         },
       ],
-      frontEndEdges: [],
+      frontEndEdges: [
+        {
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: id,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${id}`,
+        },
+      ],
     };
     return flowConfig;
   } catch (error) {
@@ -160,10 +260,27 @@ const buttonPayload = async (type, sub_type, data) => {
 const flowPayload = async (type, sub_type, data) => {
   try {
     const id = uuidv4();
+    const startId = uuidv4();
     const flowConfig = {
       edges: [],
       nodes: [{ id, type, sub_type, data }],
       frontEndNodes: [
+        {
+          id: startId,
+          type: "startNode",
+          position: {
+            x: -206.68458729880103,
+            y: 186.04391192742173,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {},
+          measured: {
+            width: 112,
+            height: 36,
+          },
+          selected: false,
+          dragging: false,
+        },
         {
           id,
           type: sub_type,
@@ -192,7 +309,15 @@ const flowPayload = async (type, sub_type, data) => {
           dragging: false,
         },
       ],
-      frontEndEdges: [],
+      frontEndEdges: [
+        {
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: id,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${id}`,
+        },
+      ],
     };
     return flowConfig;
   } catch (error) {
@@ -204,10 +329,27 @@ const flowPayload = async (type, sub_type, data) => {
 const catalogMessagePayload = async (type, sub_type, data) => {
   try {
     const id = uuidv4();
+    const startId = uuidv4();
     const flowConfig = {
       edges: [],
       nodes: [{ id, type, sub_type, data }],
       frontEndNodes: [
+        {
+          id: startId,
+          type: "startNode",
+          position: {
+            x: -206.68458729880103,
+            y: 186.04391192742173,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {},
+          measured: {
+            width: 112,
+            height: 36,
+          },
+          selected: false,
+          dragging: false,
+        },
         {
           id,
           type,
@@ -228,7 +370,15 @@ const catalogMessagePayload = async (type, sub_type, data) => {
           dragging: false,
         },
       ],
-      frontEndEdges: [],
+      frontEndEdges: [
+        {
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: id,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${id}`,
+        },
+      ],
     };
     return flowConfig;
   } catch (error) {
@@ -240,10 +390,27 @@ const catalogMessagePayload = async (type, sub_type, data) => {
 const productMessagePayload = async (type, sub_type, data) => {
   try {
     const id = uuidv4();
+    const startId = uuidv4();
     const flowConfig = {
       edges: [],
       nodes: [{ id, type, sub_type, data }],
       frontEndNodes: [
+        {
+          id: startId,
+          type: "startNode",
+          position: {
+            x: -206.68458729880103,
+            y: 186.04391192742173,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {},
+          measured: {
+            width: 112,
+            height: 36,
+          },
+          selected: false,
+          dragging: false,
+        },
         {
           id,
           type,
@@ -265,7 +432,15 @@ const productMessagePayload = async (type, sub_type, data) => {
           dragging: false,
         },
       ],
-      frontEndEdges: [],
+      frontEndEdges: [
+        {
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: id,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${id}`,
+        },
+      ],
     };
     return flowConfig;
   } catch (error) {
@@ -277,10 +452,27 @@ const productMessagePayload = async (type, sub_type, data) => {
 const productListMessagePayload = async (type, sub_type, data) => {
   try {
     const id = uuidv4();
+    const startId = uuidv4();
     const flowConfig = {
       edges: [],
       nodes: [{ id, type, sub_type, data }],
       frontEndNodes: [
+        {
+          id: startId,
+          type: "startNode",
+          position: {
+            x: -206.68458729880103,
+            y: 186.04391192742173,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {},
+          measured: {
+            width: 112,
+            height: 36,
+          },
+          selected: false,
+          dragging: false,
+        },
         {
           id,
           type,
@@ -304,7 +496,15 @@ const productListMessagePayload = async (type, sub_type, data) => {
           dragging: false,
         },
       ],
-      frontEndEdges: [],
+      frontEndEdges: [
+        {
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: id,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${id}`,
+        },
+      ],
     };
     return flowConfig;
   } catch (error) {
@@ -316,10 +516,27 @@ const productListMessagePayload = async (type, sub_type, data) => {
 const templatePayload = async (type, sub_type, data) => {
   try {
     const id = uuidv4();
+    const startId = uuidv4();
     const flowConfig = {
       edges: [],
       nodes: [{ id, type, sub_type, data }],
       frontEndNodes: [
+        {
+          id: startId,
+          type: "startNode",
+          position: {
+            x: -206.68458729880103,
+            y: 186.04391192742173,
+          },
+          dragHandle: ".drag-handle__custom",
+          data: {},
+          measured: {
+            width: 112,
+            height: 36,
+          },
+          selected: false,
+          dragging: false,
+        },
         {
           id,
           type,
@@ -345,7 +562,15 @@ const templatePayload = async (type, sub_type, data) => {
           dragging: false,
         },
       ],
-      frontEndEdges: [],
+      frontEndEdges: [
+        {
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: id,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${id}`,
+        },
+      ],
     };
     return flowConfig;
   } catch (error) {
@@ -370,9 +595,14 @@ const payloadHandlers = {
 
 const groupPayload = async (type, data) => {
   const id = uuidv4();
+  const startId = uuidv4();
+
+  const frontEndEdges = [];
 
   const frontEndNodes = await Promise.all(
-    data.map(async (item) => {
+    data.map(async (item, index) => {
+      const itemId = uuidv4();
+
       const { type: itemType, sub_type, data: itemData } = item;
 
       // Determine which key to use in the handler map
@@ -389,7 +619,15 @@ const groupPayload = async (type, data) => {
 
       try {
         const result = await handler(itemType, sub_type, itemData);
-        return result?.frontEndNodes?.[0] || null;
+        const mapId = result?.frontEndNodes?.[1]?.id;
+        frontEndEdges.push({
+          source: startId,
+          sourceHandle: "startNodeOut",
+          target: mapId,
+          animated: true,
+          id: `xy-edge__${startId}startNodeOut-${mapId}`,
+        });
+        return result?.frontEndNodes?.[1] || null;
       } catch (error) {
         console.log(`Error processing ${itemType}/${sub_type}:`, error);
         return null;
@@ -409,8 +647,26 @@ const groupPayload = async (type, data) => {
         }, {}),
       },
     ],
-    frontEndNodes: frontEndNodes.filter(Boolean),
-    frontEndEdges: [],
+    frontEndNodes: [
+      {
+        id: startId,
+        type: "startNode",
+        position: {
+          x: -206.68458729880103,
+          y: 186.04391192742173,
+        },
+        dragHandle: ".drag-handle__custom",
+        data: {},
+        measured: {
+          width: 112,
+          height: 36,
+        },
+        selected: false,
+        dragging: false,
+      },
+      ...frontEndNodes.filter(Boolean),
+    ],
+    frontEndEdges,
   };
 };
 
