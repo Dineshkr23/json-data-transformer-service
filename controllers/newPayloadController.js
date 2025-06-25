@@ -244,8 +244,8 @@ function generateStartNode(node, handleTargets) {
   };
 }
 
-function sanitizeBlocks(blocks) {
-  return blocks.map((block) => {
+function sanitizeBlocks(frontEndNodes, backendNodes) {
+  return frontEndNodes.map((block) => {
     if (block.type === "template") {
       const template = block?.data?.template;
 
@@ -266,6 +266,31 @@ function sanitizeBlocks(blocks) {
       }
     }
 
+    if (
+      block.type === "catalog" &&
+      ["product", "product_list"].includes(block?.data?.catalogue_type)
+    ) {
+      const hasCatalogId = block?.data?.catalog_id || block?.data?.catalogue_id;
+
+      if (!hasCatalogId) {
+        const matchingNode = backendNodes.find(
+          (n) => n.id === block.id && n.type === "catalog"
+        );
+
+        const catalogIdFromBackend = matchingNode?.data?.action?.catalog_id;
+
+        if (catalogIdFromBackend) {
+          return {
+            ...block,
+            data: {
+              ...block.data,
+              catalog_id: catalogIdFromBackend,
+            },
+          };
+        }
+      }
+    }
+
     return block;
   });
 }
@@ -279,9 +304,9 @@ const newPayload = async (req, res) => {
       });
     }
 
-    let { frontEndNodes, frontEndEdges } = flowConfig;
+    let { nodes, frontEndNodes, frontEndEdges } = flowConfig;
 
-    const sanitizedNodes = sanitizeBlocks(frontEndNodes);
+    const sanitizedNodes = sanitizeBlocks(frontEndNodes, nodes);
 
     const updatedNodes = await generateNodesPayload(
       sanitizedNodes,
