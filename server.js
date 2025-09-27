@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { v4 as uuidv4 } from "uuid";
 import newPayloadRoutes from "./routes/newPayload.js";
+import campaignPayloadRoutes from "./routes/campaignPayload.js";
 
 const app = express();
 
@@ -736,6 +737,8 @@ app.post("/transform", async (req, res) => {
 });
 
 app.use("/new-payload", newPayloadRoutes);
+
+app.use("/new-campaign-payload", campaignPayloadRoutes);
 
 app.listen(5000, () => {
   console.log("🚀 Server running at http://localhost:5000");

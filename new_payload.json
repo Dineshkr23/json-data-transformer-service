@@ -1,0 +1,579 @@
+{
+    "flowConfig": {
+        "edges": [
+            {
+                "id": "e3693b40-50cd-4606-8ff9-896d7ec6392e-6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d",
+                "source": "e3693b40-50cd-4606-8ff9-896d7ec6392e",
+                "target": "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d",
+                "type": "custom",
+                "animated": true,
+                "data": {
+                    "isConditional": false
+                }
+            },
+            {
+                "id": "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d-3b528248-a069-4a76-ac22-8bf27da1e321",
+                "source": "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d",
+                "target": "3b528248-a069-4a76-ac22-8bf27da1e321",
+                "type": "custom",
+                "animated": true,
+                "data": {
+                    "isConditional": false
+                }
+            }
+        ],
+        "nodes": [
+            {
+                "id": "e3693b40-50cd-4606-8ff9-896d7ec6392e",
+                "type": "template",
+                "messageName": "Message 1",
+                "data": {
+                    "templateId": "1676869992919577",
+                    "media": {
+                        "type": "image",
+                        "image": {
+                            "originalname": "whatsapp.jpeg",
+                            "mimetype": "image/jpeg",
+                            "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                            "metaId": "737217139316516",
+                            "_id": "68c15feb066dc749146d4258",
+                            "createdAt": "2025-09-10T11:24:27.886Z",
+                            "__v": 0
+                        }
+                    },
+                    "dynamic_mapping": {
+                        "1": {
+                            "type": "dynamic",
+                            "mapping": "Name"
+                        }
+                    },
+                    "product_sets": [
+                        "2299595653582651",
+                        "814950509808989"
+                    ],
+                    "carouselMedia": [
+                        {
+                            "type": "image",
+                            "image": {
+                                "originalname": "whatsapp.jpeg",
+                                "mimetype": "image/jpeg",
+                                "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                                "metaId": "737217139316516",
+                                "_id": "68c15feb066dc749146d4258",
+                                "createdAt": "2025-09-10T11:24:27.886Z",
+                                "__v": 0
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "video": {
+                                "originalname": "whatsapp.jpeg",
+                                "mimetype": "image/jpeg",
+                                "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                                "metaId": "737217139316516",
+                                "_id": "68c15feb066dc749146d4258",
+                                "createdAt": "2025-09-10T11:24:27.886Z",
+                                "__v": 0
+                            }
+                        }
+                    ],
+                    "template_options": [
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Send",
+                                "target": [
+                                    "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Delivered",
+                                "target": [
+                                    "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Read-Not-Replied",
+                                "target": [
+                                    "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Failed",
+                                "target": [
+                                    "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Inline Reply",
+                                "target": [
+                                    "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "delay": {
+                    "type": "second",
+                    "unit": 0
+                }
+            },
+            {
+                "id": "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d",
+                "type": "template",
+                "messageName": "Message 2",
+                "data": {
+                    "templateId": "1676869992919577",
+                    "media": {
+                        "type": "image",
+                        "image": {
+                            "originalname": "whatsapp.jpeg",
+                            "mimetype": "image/jpeg",
+                            "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                            "metaId": "737217139316516",
+                            "_id": "68c15feb066dc749146d4258",
+                            "createdAt": "2025-09-10T11:24:27.886Z",
+                            "__v": 0
+                        }
+                    },
+                    "dynamic_mapping": {
+                        "1": {
+                            "type": "dynamic",
+                            "mapping": "Name"
+                        }
+                    },
+                    "product_sets": [
+                        "2299595653582651",
+                        "814950509808989"
+                    ],
+                    "carouselMedia": [
+                        {
+                            "type": "image",
+                            "image": {
+                                "originalname": "whatsapp.jpeg",
+                                "mimetype": "image/jpeg",
+                                "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                                "metaId": "737217139316516",
+                                "_id": "68c15feb066dc749146d4258",
+                                "createdAt": "2025-09-10T11:24:27.886Z",
+                                "__v": 0
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "video": {
+                                "originalname": "whatsapp.jpeg",
+                                "mimetype": "image/jpeg",
+                                "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                                "metaId": "737217139316516",
+                                "_id": "68c15feb066dc749146d4258",
+                                "createdAt": "2025-09-10T11:24:27.886Z",
+                                "__v": 0
+                            }
+                        }
+                    ],
+                    "template_options": [
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Send",
+                                "target": [
+                                    "3b528248-a069-4a76-ac22-8bf27da1e321"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Delivered",
+                                "target": [
+                                    "3b528248-a069-4a76-ac22-8bf27da1e321"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Read-Not-Replied",
+                                "target": [
+                                    "3b528248-a069-4a76-ac22-8bf27da1e321"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Failed",
+                                "target": [
+                                    "3b528248-a069-4a76-ac22-8bf27da1e321"
+                                ]
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Inline Reply",
+                                "target": [
+                                    "3b528248-a069-4a76-ac22-8bf27da1e321"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "delay": {
+                    "type": "second",
+                    "unit": 0
+                }
+            },
+            {
+                "id": "3b528248-a069-4a76-ac22-8bf27da1e321",
+                "type": "template",
+                "messageName": "Message 3",
+                "data": {
+                    "templateId": "1676869992919577",
+                    "media": {
+                        "type": "image",
+                        "image": {
+                            "originalname": "whatsapp.jpeg",
+                            "mimetype": "image/jpeg",
+                            "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                            "metaId": "737217139316516",
+                            "_id": "68c15feb066dc749146d4258",
+                            "createdAt": "2025-09-10T11:24:27.886Z",
+                            "__v": 0
+                        }
+                    },
+                    "dynamic_mapping": {
+                        "1": {
+                            "type": "dynamic",
+                            "mapping": "Name"
+                        }
+                    },
+                    "product_sets": [
+                        "2299595653582651",
+                        "814950509808989"
+                    ],
+                    "carouselMedia": [
+                        {
+                            "type": "image",
+                            "image": {
+                                "originalname": "whatsapp.jpeg",
+                                "mimetype": "image/jpeg",
+                                "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                                "metaId": "737217139316516",
+                                "_id": "68c15feb066dc749146d4258",
+                                "createdAt": "2025-09-10T11:24:27.886Z",
+                                "__v": 0
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "video": {
+                                "originalname": "whatsapp.jpeg",
+                                "mimetype": "image/jpeg",
+                                "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                                "metaId": "737217139316516",
+                                "_id": "68c15feb066dc749146d4258",
+                                "createdAt": "2025-09-10T11:24:27.886Z",
+                                "__v": 0
+                            }
+                        }
+                    ],
+                    "template_options": [
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Send",
+                                "target": []
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Delivered",
+                                "target": []
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Read-Not-Replied",
+                                "target": []
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Failed",
+                                "target": []
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "state": {
+                                "value": "Inline Reply",
+                                "target": []
+                            }
+                        }
+                    ]
+                },
+                "delay": {
+                    "type": "second",
+                    "unit": 0
+                }
+            }
+        ],
+        "frontEndNodes": [
+            {
+                "id": "e3693b40-50cd-4606-8ff9-896d7ec6392e",
+                "type": "template",
+                "position": {
+                    "x": -366,
+                    "y": 6
+                },
+                "data": {
+                    "label": "Template Message",
+                    "messageName": "Message 1",
+                    "type": "message",
+                    "template": "1676869992919577",
+                    "media": {
+                        "originalname": "whatsapp.jpeg",
+                        "mimetype": "image/jpeg",
+                        "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                        "metaId": "737217139316516",
+                        "_id": "68c15feb066dc749146d4258",
+                        "createdAt": "2025-09-10T11:24:27.886Z",
+                        "__v": 0
+                    },
+                    "dynamic_mapping": {
+                        "1": {
+                            "type": "dynamic",
+                            "mapping": "Name"
+                        }
+                    },
+                    "product_sets": [
+                        "2299595653582651",
+                        "814950509808989"
+                    ],
+                    "carouselMedia": {
+                        "0": {
+                            "originalname": "whatsapp.jpeg",
+                            "mimetype": "image/jpeg",
+                            "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                            "metaId": "737217139316516",
+                            "_id": "68c15feb066dc749146d4258",
+                            "createdAt": "2025-09-10T11:24:27.886Z",
+                            "__v": 0
+                        },
+                        "1": {
+                            "originalname": "whatsapp.mp4",
+                            "mimetype": "mp4",
+                            "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.mp4",
+                            "metaId": "737217139316516",
+                            "_id": "68c15feb066dc749146d4258",
+                            "createdAt": "2025-09-10T11:24:27.886Z",
+                            "__v": 0
+                        }
+                    },
+                    "delay": {
+                        "type": "second",
+                        "unit": 0
+                    }
+                },
+                "measured": {
+                    "width": 320,
+                    "height": 437
+                },
+                "selected": false,
+                "dragging": false
+            },
+            {
+                "id": "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d",
+                "type": "template",
+                "position": {
+                    "x": -366,
+                    "y": 6
+                },
+                "data": {
+                    "label": "Template Message",
+                    "messageName": "Message 2",
+                    "type": "message",
+                    "template": "1676869992919577",
+                    "media": {
+                        "originalname": "whatsapp.jpeg",
+                        "mimetype": "image/jpeg",
+                        "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                        "metaId": "737217139316516",
+                        "_id": "68c15feb066dc749146d4258",
+                        "createdAt": "2025-09-10T11:24:27.886Z",
+                        "__v": 0
+                    },
+                    "dynamic_mapping": {
+                        "1": {
+                            "type": "dynamic",
+                            "mapping": "Name"
+                        }
+                    },
+                    "product_sets": [
+                        "2299595653582651",
+                        "814950509808989"
+                    ],
+                    "carouselMedia": {
+                        "0": {
+                            "originalname": "whatsapp.jpeg",
+                            "mimetype": "image/jpeg",
+                            "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                            "metaId": "737217139316516",
+                            "_id": "68c15feb066dc749146d4258",
+                            "createdAt": "2025-09-10T11:24:27.886Z",
+                            "__v": 0
+                        },
+                        "1": {
+                            "originalname": "whatsapp.mp4",
+                            "mimetype": "mp4",
+                            "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.mp4",
+                            "metaId": "737217139316516",
+                            "_id": "68c15feb066dc749146d4258",
+                            "createdAt": "2025-09-10T11:24:27.886Z",
+                            "__v": 0
+                        }
+                    },
+                    "delay": {
+                        "type": "second",
+                        "unit": 0
+                    }
+                },
+                "measured": {
+                    "width": 320,
+                    "height": 437
+                },
+                "selected": false,
+                "dragging": false
+            },
+            {
+                "id": "3b528248-a069-4a76-ac22-8bf27da1e321",
+                "type": "template",
+                "position": {
+                    "x": -366,
+                    "y": 6
+                },
+                "data": {
+                    "label": "Template Message",
+                    "messageName": "Message 3",
+                    "type": "message",
+                    "template": "1676869992919577",
+                    "media": {
+                        "originalname": "whatsapp.jpeg",
+                        "mimetype": "image/jpeg",
+                        "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                        "metaId": "737217139316516",
+                        "_id": "68c15feb066dc749146d4258",
+                        "createdAt": "2025-09-10T11:24:27.886Z",
+                        "__v": 0
+                    },
+                    "dynamic_mapping": {
+                        "1": {
+                            "type": "dynamic",
+                            "mapping": "Name"
+                        }
+                    },
+                    "product_sets": [
+                        "2299595653582651",
+                        "814950509808989"
+                    ],
+                    "carouselMedia": {
+                        "0": {
+                            "originalname": "whatsapp.jpeg",
+                            "mimetype": "image/jpeg",
+                            "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.jpeg",
+                            "metaId": "737217139316516",
+                            "_id": "68c15feb066dc749146d4258",
+                            "createdAt": "2025-09-10T11:24:27.886Z",
+                            "__v": 0
+                        },
+                        "1": {
+                            "originalname": "whatsapp.mp4",
+                            "mimetype": "mp4",
+                            "mediaLink": "https://staging-storage-api.emovur.com/cc-bucket/uploads/1757503466172_whatsapp.mp4",
+                            "metaId": "737217139316516",
+                            "_id": "68c15feb066dc749146d4258",
+                            "createdAt": "2025-09-10T11:24:27.886Z",
+                            "__v": 0
+                        }
+                    },
+                    "delay": {
+                        "type": "second",
+                        "unit": 0
+                    }
+                },
+                "measured": {
+                    "width": 320,
+                    "height": 437
+                },
+                "selected": false,
+                "dragging": false
+            },
+            {
+                "id": "plus-a79a2308-971f-4c95-8754-ee35509964f4",
+                "type": "plusIcon",
+                "position": {
+                    "x": 240.90570060093762,
+                    "y": 901.5903033458831
+                },
+                "data": {
+                    "source": "3b528248-a069-4a76-ac22-8bf27da1e321"
+                },
+                "measured": {
+                    "width": 60,
+                    "height": 60
+                },
+                "selected": false,
+                "dragging": false
+            }
+        ],
+        "frontEndEdges": [
+            {
+                "id": "e3693b40-50cd-4606-8ff9-896d7ec6392e-6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d",
+                "source": "e3693b40-50cd-4606-8ff9-896d7ec6392e",
+                "target": "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d",
+                "type": "custom",
+                "animated": true,
+                "data": {
+                    "isConditional": false
+                }
+            },
+            {
+                "id": "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d-3b528248-a069-4a76-ac22-8bf27da1e321",
+                "source": "6f986bd4-e29a-4d6c-9e45-ca58f6e6d27d",
+                "target": "3b528248-a069-4a76-ac22-8bf27da1e321",
+                "type": "custom",
+                "animated": true,
+                "data": {
+                    "isConditional": false
+                }
+            },
+            {
+                "id": "3b528248-a069-4a76-ac22-8bf27da1e321-plus-a79a2308-971f-4c95-8754-ee35509964f4",
+                "source": "3b528248-a069-4a76-ac22-8bf27da1e321",
+                "target": "plus-a79a2308-971f-4c95-8754-ee35509964f4",
+                "type": "custom",
+                "animated": true,
+                "data": {
+                    "isConditional": false
+                }
+            }
+        ]
+    }
+}
