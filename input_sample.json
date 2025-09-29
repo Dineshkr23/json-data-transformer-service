@@ -1,6 +1,8 @@
 [
     {
         "type": "template",
+        "messageName": "Message 1",
+        "broadcastId": "1213",
         "data": {
             "templateId": "1676869992919577",
             "media": {

@@ -67,7 +67,8 @@ const transformCampaignPayload = (inputArray) => {
     return {
       id: nodeId,
       type: "template",
-      messageName: index === 0 ? "Welcome Message" : `New Message ${index}`,
+      messageName: template.messageName,
+      broadcastId: template.broadcastId,
       data: {
         ...template.data,
         template_options: templateOptions,
@@ -103,8 +104,8 @@ const transformCampaignPayload = (inputArray) => {
       type: "template",
       position: { x, y },
       data: {
-        label: "Template Message",
-        messageName: index === 0 ? "Welcome Message" : `New Message ${index}`,
+        label: template.messageName,
+        messageName: template.messageName,
         type: "message",
         template: template.data.templateId,
         media:
